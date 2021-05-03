@@ -144,9 +144,11 @@ describe('useCart Hook', () => {
         expect(mockedToastError).toHaveBeenCalledWith(
           'Erro na adição do produto'
         );
+
         expect(result.current.cart).toEqual(
           expect.arrayContaining(initialStoragedData)
         );
+        
         expect(mockedSetItemLocalStorage).not.toHaveBeenCalled();
       },
       { timeout: 200 }
